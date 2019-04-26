@@ -1,0 +1,153 @@
+/* RESETS AND PAGE ELEMENTS  */
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+body{
+    margin: 0 auto;
+    width: 100%;
+}
+h1{
+    font-size: 5em;
+    line-height: 1em;
+}
+h2{
+    font-size: 2em;
+    color: #000;
+}
+
+ul{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* HEADER AND NAV */
+header{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul{
+    float: right;
+    padding: 0;
+}
+nav li{
+    float: left;
+    padding: 0 15px;
+}
+nav a{
+    color: #000;
+}
+
+main{
+    clear: both;
+    margin: 0 auto;
+    width: 99%;
+}
+/* HOME BANNER */
+#headline{
+    color: #fff;
+    margin: 5% auto 0 auto;
+    width: 100%;
+    height: 25%;
+    background-image: url("/images/egg2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#pizza{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+#service_link{
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+/* FORM SECTION */
+#slider{
+    width: 50%;
+}
+#sec_2{
+    float: left;
+    margin: 0 auto;
+}
+
+#sec_3{
+    clear: both;
+    margin: 0 auto;
+}
+
+#testimonials li{
+    float: left;
+}
+/* HOME - TESTIMONIAL */
+#testimonial{
+    clear: both;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#testimonial_head{
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px){
+    nav ul{ 
+        float: none; 
+        text-align: center;}
+
+
+    main{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #desk_h1{
+        display: none;
+    }
+    #service{
+
+        color: #000;
+        margin: 0 auto;
+        width: 100%;
+        height: 25%;
+        }
+
+    .serve_mobile{
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    height: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    }
+    
+    .col{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #form_sec h2{
+    color: #000;
+    margin: 0 auto;
+}
+}
+

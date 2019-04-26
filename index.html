@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOMESPICE</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta name="theme-color" content="#fafafa">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+    <div class="container">
+ <header class="row">
+<h1 id="headline">Let's Get<br/><span id="personal">Personal.</span></h1>
+  <nav class="col-lg-12">
+    <ul>
+      <li><a href="index.html" title="Homepage">Home</a></li>
+      <li><a href="service.html" title="Learn about services">Services</a></li>
+      <li><a href="about.html" title="About Jared">About</a></li>
+      <li><a href="contact.html" title="Contact Jared">Contact</a></li>
+    </ul>
+  </nav>
+ </header>
+ </div>
+
+<br/>
+<!-- Main Content -->
+ <main class="container">
+    <section class="col-lg-12" id="sec_1">
+    <p id="service_link"><strong>Your food done your way.</strong></p>
+    <p>From teaching you how to cook a pizza to catering your next big event, Jared has you covered! If you are in need of a
+      culinary expert
+      ready to wow you and your guests looke no further! Learn more about<a href="service.html"
+        title="Learn about services here"> Jared's services</a></p>
+    <img id="pizza" src="images/pizza_lesson.jpg" alt="Pizza lesson">
+    </section>
+
+    <br/>
+
+    <!-- Form Divs -->
+  <section class="row" id="sec_2">
+   <div class="col-lg-9">
+    <h2>Why hire a personal chef?</h2>
+    <br/>
+    <p>It can be hard set aside the time it takes to prepare a proper meal. It can be even harder for those individuals who 
+      must follow a strict diet or just don't have the ability to cook for themseleves. <a href="about.html" title="Learn more about Jared">Jared has over <span id="exp_year"></span> </a> to cater to anyone's needs including:
+    </p>
+    <ul>
+        <li><i class="fas fa-heartbeat" title="Heartbeat"></i> Specialty Diets</li>
+        <li><i class="fas fa-exclamation-triangle" title="Warning"></i> Allergy Restrictions</li>
+        <li><i class="fas fa-universal-access" title="Accessible"></i> Mobility Assistance</li>
+    </ul>
+    <img id="slider" src="../final/images/slider.jpg" alt="Gormet Slider">
+   </div>
+   <div class="col-lg-3">
+        <h2>Submit qustions here or visit the <a href="contact.html">Contact Page</a> to book an
+            appointment.</h2>
+        <form>
+            <fieldset>
+                <div class="form-group">
+                  <label for="name"><i class="fas fa-user-edit" title="Name Avatar"></i> Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <label for="email"><i class="far fa-envelope" title="Envelope"></i> Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Jane@doe.com">
+                </div>
+            </fieldset>
+  <div class="form-group">
+    <label for="text1">Message</label>
+    <textarea class="form-control" id="text1" rows="3" placeholder="Your message here!"></textarea>
+  </div>
+            <button class="btn btn-primary mb-2" id=#submit type="submit"  title="Submit query"><i
+                    class="far fa-paper-plane" title="Paper plane"></i> Send</button>
+        </form>
+
+   <br/>
+  </section>
+
+<br/>
+
+<!-- Testimonials -->
+  <section class="row" id="sec_3">
+   <div class="col-lg-12">
+    <h2 id="testimonial_head"><i class="far fa-comment" title="Comment bubble"></i> Testimonials</h2>
+    <br />
+    <ul id="testimonials">
+        <li class="col-lg-4"><cite> "Jared is caring, talented, and an amazing chef! I
+                recommend him
+                with great enthusiasm."</cite><br /> <i class="far fa-user-circle" title="Avatar"></i> <strong>Gail L.</strong></li>
+        <li class="col-lg-4"><cite> "Jared did an excellent job for us. The food was
+                creative and delicious
+                and beautifully presented. Jared was professional and came prepared. He left
+                the kitchen clean too."</cite><br /> <i class="far fa-user-circle" title="Avatar"></i> <strong>Brittany M.</strong></li>
+        <li class="col-lg-4"></i><cite> "Jared is very responsive and flexible on scheduling and
+                responding."</cite><br /> <i class="far fa-user-circle" title="Avatar"></i> <strong>Catherine M.</strong></li>
+    </ul>
+   </div>
+  </section>
+  
+ </main>
+ 
+</body>
+<script type="text/javascript">
+var today = new Date();
+var year = today.getFullYear();
+var start = new Date("March 24, 2006 11:30:20");
+var difference = today.getTime() - start.getTime();
+difference = (difference / 31556900000);
+
+var exp = document.getElementById("exp_year");
+exp.textContent = Math.floor(difference) + ' years of professional experience.';
+</script>
+</html>
