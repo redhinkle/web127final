@@ -61,7 +61,7 @@ main{
     margin: 5% auto 0 auto;
     width: 100%;
     height: 25%;
-    background-image: url("/images/egg2.jpg");
+    background-image: url("images/egg2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -108,6 +108,11 @@ display: block;
     text-align: center;
 }
 
+.serve_img{
+    width: 100%;
+    display: block;
+    max-height: 10%;
+}
 
 @media only screen and (max-width: 768px){
     nav ul{ 

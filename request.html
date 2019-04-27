@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOMESPICE</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta name="theme-color" content="#fafafa">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+    <div class="container">
+ <header class="row">
+<h1 id="headline">Service<br/><span id="personal">Request</span></h1>
+  <nav class="col-lg-12">
+    <ul>
+      <li><a href="index.html" title="Homepage">Home</a></li>
+      <li><a href="service.html" title="Learn about services">Services</a></li>
+      <li><a href="about.html" title="About Jared">About</a></li>
+      <li><a href="request.html" title="Request Jared">Request</a></li>
+    </ul>
+  </nav>
+ </header>
+ </div>
+ <div class="container">
+        <h2>Request Form:</h2>
+        <p>This form will provide me with a guideline understanding of your needs, please fill out the form to the best of your ability.</p>
+        <p>Once submitted I will contact you to schedule a meeting to get a more detailed understanding of your needs.</p>
+        <p>* = required information</p>
+ </div>
+ <div class="container">
+<!-- SERVICE FORM START -->
+        <form id="service_form" action="submissions.php" method="post">
+            <fieldset>
+                <!--Personal Info  -->
+                <div class="form-row">
+                <legend>Personal Information</legend>
+                <!-- Name -->
+                <div class="form group col-md-3">
+                <label for="name">Name:* </label>
+                <input type="text" class="form-control" id="name" value="Name" name="name" required>
+                </div>
+                <!-- Email -->
+                <div class="form group col-md-3">
+                <label for="email">E-Mail:* </label>
+                <input type="email" class="form-control" id="email" value="You@Example.com" name="email" required>
+                </div>
+                <br/>
+                <!-- Phone -->
+                <div class="form group">
+                <label for="phone">Phone: </label>
+                <input type="tel" class="form-control" id="phone" value="(888) 555-5555" name="phone">
+                </div>
+                <!-- ZIP -->
+                <div class="form group">
+                <label for="zip">Zip Code:* </label>
+                <input type="address" class="form-control" id="zip" value="90210" name="zip" required>
+                <p id="zipline"></p><br/>
+                </div>
+                </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="container">
+            <fieldset>
+            <legend>Service Type</legend>
+                <p>Please select a type of service:<br/>
+                <!-- Event -->
+                <div class="radio">
+                <input type="radio" id="event" value="Events" name="service">
+                <label for="event">Events</label>
+                </div>
+                <!-- Personal -->
+                <div class="radio">
+                <input type="radio" id="meals" value="Meal Prep" name="service">
+                <label for="meals">Meal Prep</label>
+                </div>
+                <!-- Lesson -->
+                <div class="radio">
+                <input type="radio" id="lessons" value="Cooking Lessons" name="service">
+                <label for="lessons">Cooking Lessons</label>
+                </div>
+                <div class="form-group">
+                <label for="details">Please add some details of the service you require:</label>
+                <textarea id="details" class="form-control col-md-4" name="details" cols="30" rows="4">Event type, number of guests, type of lesson, etc...</textarea>
+                </div>
+            </fieldset>
+            </div>
+            <div class="container">
+            <fieldset>
+                <legend>Personal Preferences</legend>
+                <!-- Cuisine -->
+                <label for="cuisine">What type of cuisine do you wish to have?</label>
+                <textarea id="cuisine" class="form-control col-md-4" name="cuisine" cols="30" rows="4">American, Asian, Mediterranean, Latin, etc...</textarea>
+                <br/>
+                <!-- Diet -->
+                <label for="diet">Do you have any dietary restrictions or allergies?</label>
+                <textarea id="diet" class="form-control col-md-4" name="diet" cols="30" rows="4">Vegan, Gluten-free, No Dairy, etc...</textarea>
+                <br/>
+            </fieldset>
+            </div>
+            <div class="container">
+            <fieldset>
+            <legend>Additional Information</legend>
+            <p>Will you provide me access to your kitchen?</p>
+            <!-- Kitchen -->
+            <div class="radio">
+            <input type="radio" id="yes" value="Yes" name="yn" checked>
+            <label for="yes">Yes</label>
+            </div>
+            <!-- Additional-->
+            <div class="radio">
+            <input type="radio" id="no" value="no" name="yn">
+            <label for="no">No</label>
+            </div>
+            <label for="comments">Anything else I should know?</label>
+            <textarea id="comments" class="form-control col-md-4" name="comments" cols="30" rows="4">Inspired recipes, family-style servings, premium ingredients, etc... </textarea>
+        </fieldset>
+        </div>
+        <div class="container">
+        <button type="submit" class="btn btn-primary" id="form_button" onsubmit="event.preventDefault(); zipvalid()">Submit Request</button>
+        </form>
+        </div>
+    </div>
+       
+       
+       <script type="text/javascript">
+        function zipValid(){
+            var x, text;
+            // get value of "zip" field
+            x = document.getElementById("zip").value;
+            
+            if(isNaN(x) || x < 10000 || x >99999){
+                text = "Please enter a valid zip code.";
+                returnToPreviousPage();
+                return false;
+            }
+            document.getElementById("zipline").innerHTML = text;
+        }
+            
+        
+        
+        </script>
+    </body>
+</html>
